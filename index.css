@@ -92,6 +92,11 @@ body {
     border-bottom: 0;
 }
 
+.container {
+    max-width: 1372px;
+    margin: 0 auto;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -104,6 +109,7 @@ body {
 
 .hero {
     height: calc(100vh - 80px - var(--header-height));
+    max-height: 680px;
     padding: 40px 12px;
     display: flex;
     flex-direction: column;
