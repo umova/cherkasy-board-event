@@ -79,7 +79,7 @@ a {
 }
 
 a:hover {
-    color: var(--button-hover-color);
+    color: var(--text-color);
 }
 
 body {
@@ -139,6 +139,11 @@ body {
 .header__nav a {
     color: white;
 }
+
+.header__nav a:hover {
+    color: var(--button-hover-color);
+}
+
 
 .hero {
     height: calc(100vh - 80px - var(--header-height));
