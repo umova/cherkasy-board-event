@@ -6,6 +6,7 @@
     --secondary-text-color: #BFC0C6;
     --accent-color: #FF8000;
     --accent-hover-color: #FF7D16;
+    --button-hover-color: #FE922C;
     --header-height: 64px;
 }
 
@@ -36,6 +37,10 @@ h4 {
     font-size: 24px;
 }
 
+.d-none {
+    display: none !important;
+}
+
 .text-center {
     text-align: center;
 }
@@ -60,13 +65,21 @@ h4 {
     color: var(--secondary-text-color);
 }
 
+.flex {
+    display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
 a {
     color: var(--accent-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--accent-hover-color);
+    color: var(--button-hover-color);
 }
 
 body {
@@ -97,14 +110,34 @@ body {
     margin: 0 auto;
 }
 
+.header-wrap {
+    background-color: var(--main-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 12px;
-    background-color: var(--main-bg-color);
-    position: sticky;
-    top: 0;
+}
+
+.header__tel {
+    margin-right: 24px;
+    display: none;
+}
+
+.header__nav {
+    font-size: 20px;
+    gap: 50px;
+    display: none;
+    margin-left: 50px;
+}
+
+.header__nav a {
+    color: white;
 }
 
 .hero {
@@ -119,7 +152,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("./img/hero-bg.png");
+    background-image: url("./img/hero-bg.webp");
 }
 
 .hero__title {
@@ -137,6 +170,8 @@ body {
 
 .info {
     padding: 70px 12px;
+    max-width: 715px;
+    margin: 0 auto;
 }
 
 .info__title {
@@ -152,18 +187,25 @@ body {
     padding: 24px 12px 70px;
 }
 
+.speakers__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 .speakers__title {
     margin-bottom: 40px;
 }
 
 .speaker {
     margin-bottom: 36px;
+    max-width: 320px;
 }
 
 .speaker__img {
-    border: 1px solid var(--accent-color);
-    height: 336px;
-    width: 336px;
+    height: 320px;
+    width: 320px;
     margin-bottom: 24px;
 }
 
@@ -173,7 +215,7 @@ body {
 
 .statistics {
     padding: 100px 12px;
-    background: url("./img/statisitcs-bg.png") no-repeat center;
+    background: url("./img/statistics-bg.webp") no-repeat center;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -182,11 +224,24 @@ body {
 
 .program {
     padding: 70px 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.program__btn {
+    margin: 40px auto 0;
 }
 
 .program-list {
+    width: 100%;
     list-style: none;
     padding-left: 0;
+    margin-bottom: 0;
+}
+
+.program-list__hide .program-list__item:nth-child(n+4) {
+    display: none;
 }
 
 .program-list__item {
@@ -204,6 +259,7 @@ body {
 .cta {
     padding: 80px 12px 120px;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-image: url("./img/cta-lines.png");
 }
@@ -213,7 +269,8 @@ body {
 }
 
 .cta__content {
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
+    max-width: 716px;
 }
 
 .cta__button {
@@ -283,13 +340,62 @@ body {
     border: none;
 }
 
-.btn_secondary {
-    background: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
+.btn_primary:hover {
+    background: var(--button-hover-color);
+}
+
+.btn_gradient {
+    background-color: transparent;
+    position: relative;
+    border: none;
+}
+
+.btn_text {
+    position: relative;
+    color: var(--text-color);
+}
+
+.btn_gradient:after {
+    content: "";
+    background: rgb(255,131,24);
+    background: linear-gradient(90deg, rgba(255,131,24,1) 0%, rgba(255,131,24,0.09989933473389356) 100%);
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn_gradient:hover:after {
+    background: var(--button-hover-color);
+}
+
+.btn_gradient:before {
+    content: "";
+    background-color: var(--main-bg-color);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
 }
 
 .btn_large {
     width: 100%;
     max-width: 444px;
+}
+
+@media (min-width: 600px) {
+    .info {
+        text-align: center;
+    }
+}
+
+@media (min-width: 800px) {
+    .header__nav,
+    .header__tel {
+        display: inline-flex;
+    }
 }
