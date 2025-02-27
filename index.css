@@ -136,14 +136,13 @@ body {
     margin-left: 50px;
 }
 
-.header__nav a {
-    color: white;
+.link-reverse {
+    color: var(--text-color);
 }
 
-.header__nav a:hover {
+.link-reverse:hover {
     color: var(--button-hover-color);
 }
-
 
 .hero {
     height: calc(100vh - 80px - var(--header-height));
