@@ -166,6 +166,10 @@ body {
 .hero__meta {
     max-width: 444px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
     width: 100%;
     justify-content: space-between;
     margin-bottom: 24px;
@@ -265,7 +269,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("./img/cta-lines.avif");
+    background-image: url("./img/cta-lines.svg");
 }
 
 .cta__title {
@@ -273,8 +277,16 @@ body {
 }
 
 .cta__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
     margin: 0 auto 60px;
-    max-width: 716px;
+    max-width: 416px;
+}
+
+.cta__sub-content {
+    margin: 16px auto;
+    max-width: 500px;
 }
 
 .cta__button {
@@ -392,6 +404,15 @@ body {
 }
 
 @media (min-width: 600px) {
+    /*.hero__meta {*/
+    /*    flex-direction: row;*/
+    /*    text-align: unset;*/
+
+    /*    a:nth-child(2) {*/
+    /*        text-align: right;*/
+    /*    }*/
+    /*}*/
+
     .info {
         text-align: center;
     }
