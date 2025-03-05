@@ -156,7 +156,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("./img/hero-bg.webp");
+    background-image: url("./img/hero-bg-mob.avif");
 }
 
 .hero__title {
@@ -404,14 +404,9 @@ body {
 }
 
 @media (min-width: 600px) {
-    /*.hero__meta {*/
-    /*    flex-direction: row;*/
-    /*    text-align: unset;*/
-
-    /*    a:nth-child(2) {*/
-    /*        text-align: right;*/
-    /*    }*/
-    /*}*/
+    .hero {
+        background-image: url("./img/hero-bg.webp");
+    }
 
     .info {
         text-align: center;

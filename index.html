@@ -4,22 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <title>Cherkasy Board</title>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" as="style" type="text/css" crossorigin="anonymous">
     <link rel="icon" href="https://board.business/wp-content/uploads/logo.png" sizes="32x32">
     <link rel="stylesheet" href="./normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FZQ9CRG0YR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-FZQ9CRG0YR');
-</script>
 <body>
     <header class="header-wrap gradient-border gradient-border_bottom">
         <div class="container">
@@ -240,7 +232,7 @@
     </section>
     <footer class="footer gradient-border gradient-border_top">
         <a class="footer__tel text-md" href="tel:0 800 330 705">0 800 330 705</a>
-        <img class="footer__logo" width="240" src="img/logo.svg" alt="Board">
+        <img class="footer__logo" height="38" width="240" src="img/logo.svg" alt="Board">
         <div class="social">
             <a target="_blank" class="social__item icon icon_linkedin" href="https://www.linkedin.com/company/boardbusiness/"></a>
             <a target="_blank" class="social__item icon icon_instagram" href="https://www.instagram.com/board.cherkasy/"></a>
@@ -249,7 +241,15 @@
         </div>
         <a class="text text-secondary" href="https://umova.tech" target="_blank">Made by UMOVA</a>
     </footer>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZQ9CRG0YR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'G-FZQ9CRG0YR');
+    </script>
     <script>
         const showBtn = document.getElementById("showList");
         const list = document.querySelector(".program-list");
