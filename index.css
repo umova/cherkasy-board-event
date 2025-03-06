@@ -146,6 +146,7 @@ body {
 
 .hero {
     height: calc(100vh - 80px - var(--header-height));
+    min-height: 260px;
     max-height: 680px;
     padding: 40px 12px;
     display: flex;
